@@ -15,16 +15,18 @@ class BookSerializerTestCase(TestCase):
                 'name': 'Test book 1',
                 'price': '25.00',
                 'author_name': 'Author 1',
-                'owner': None
+                'owner': None,
+                'readers': []
             },
             {
                 'id': book2.id,
                 'name': 'Test book 2',
                 'price': '55.00',
                 'author_name': 'Author 2',
-                'owner': None
+                'owner': None,
+                'readers': []
 
             }
         ]
-        # actual_data = [dict(item) for item in data]
-        self.assertEqual(expected_data, data)
+        actual_data = [dict(item) for item in data]
+        self.assertEqual(expected_data, actual_data)
